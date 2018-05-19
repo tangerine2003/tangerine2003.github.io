@@ -16,6 +16,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
+  body_classes = "avenir bg-near-white"
   favicon = ""
   description = "Radiant Glow Studio Website"
   facebook = ""
