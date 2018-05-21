@@ -1,8 +1,8 @@
 # Site settings
 baseurl = "https://example.org/"
 languageCode = "en-us"
-title = "Radiant Glow Studio"
-theme = "hugo-agency-theme-master"
+title = "Agency"
+theme = "hugo-agency-theme"
 
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
@@ -17,9 +17,9 @@ googleAnalytics = ""
 
   # To provide some metadata for search engines feel free to add a few
   # information about you and your website.
-  name = "Radiant Glow Studios"
+  name = "Your name"
   description = "Your description"
-  email = "radiantglowairbrushstudio@gmail.com"
+  # email = "your@email.com"
 
   # Link custom assets relative to /static
   custom_css = []
@@ -46,13 +46,13 @@ googleAnalytics = ""
 
   # Navigation
   [params.navigation]
-    brand = "Radiant Glow Studio"
+    brand = "The Agency"
     # Optional logo as brand stored in img/
     #logo = "logo.svg"
     services = "Services"
-    #portfolio = "Portfolio"
+    portfolio = "Portfolio"
     about = "About"
-    #team = "Team"
+    team = "Team"
     contact = "Contact"
 
     # Add custom links. Those can be pre- and postpended to the default menu above.
@@ -66,17 +66,17 @@ googleAnalytics = ""
     #  weight = 10
 
     # postpended links
-    #[[menu.postpend]]
-    #  url = "http://gohugo.io"
-    #  name = "External link"
-    #  weight = 10
+    [[menu.postpend]]
+      url = "http://gohugo.io"
+      name = "External link"
+      weight = 10
 
 
   # Hero section
   [params.hero]
     # To change the background image of the hero, replace 'header-bg.jpg' in
     # the 'static/img' folder.
-    title = "Welcome To Radiant Glow Studio!"
+    title = "Welcome To Our Studio!"
     subtitle = "It's nice to meet you"
     buttonText = "Tell me more"
 
@@ -85,13 +85,13 @@ googleAnalytics = ""
   [params.services]
     enable = true
     title = "Services"
-    #subtitle = "Lorem ipsum dolor sit amet consectetur."
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
 
     [[params.services.row]]
 
     [[params.services.row.list]]
-      icon = "Spray Tanning"
-      title = "Spray Tanning"
+      icon = "fa-shopping-cart"
+      title = "E-Commerce"
       description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
       url = "#"
 
@@ -106,6 +106,23 @@ googleAnalytics = ""
       title = "Web"
       description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
       url = "#"
+
+  # Portfolio section
+  [params.portfolio]
+    enable = true
+    # All projects defined in their own files. You can find example projects
+    # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+    # at the root of this Hugo site.
+    # For more informtion take a look at the README.
+    title = "Portfolio"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+
+    [params.portfolio.modal]
+      client = "Client"
+      date = "Date"
+      category = "Category"
+      buttonText = "Close project"
+
 
     # About section
   [params.about]
@@ -129,38 +146,103 @@ googleAnalytics = ""
       title = "An Agency is Born"
       description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
 
+    [[params.about.events]]
+      img = "3.jpg"
+      date = "December 2012"
+      title = "Our Humble Beginnings"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
+    [[params.about.events]]
+      img = "4.jpg"
+      date = "July 2014"
+      title = "Phase Two Expansion"
+      description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+
 
   # Team section
-  #[params.team]
-   # enable = true
+  [params.team]
+    enable = true
     # Possibility to center items
     #center = true
-    #title = "Our amazing team"
-    #subtitle = "Lorem ipsum dolor sit amet consectetur."
-    #description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+    title = "Our amazing team"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+    description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
 
     # All team member's pictures are stored under 'static/img/team'.
     # Replace them with your own too.
     # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
-    #[[params.team.members]]
-    #  img = "1.jpg"
-    #  name = "Kay Garland"
-    #  position = "Lead Designer"
-    #  reportsTo = "CTO"
-    #  livesIn = "[Munich, Germany](#some-maps-url)"
-    #  scope = [
-    #    "UX for [member dashboard](#)",
-    #    "Maintainer for [awesome-project](#)",
-    #    "Open Source [community management](#)"
-    #  ]
+    [[params.team.members]]
+      img = "1.jpg"
+      name = "Kay Garland"
+      position = "Lead Designer"
+      reportsTo = "CTO"
+      livesIn = "[Munich, Germany](#some-maps-url)"
+      scope = [
+        "UX for [member dashboard](#)",
+        "Maintainer for [awesome-project](#)",
+        "Open Source [community management](#)"
+      ]
       # For bio markdown and even multiline strings are available.
+      bio = """Kay is an awesome Lead Designer with heaps of experience in the field of UX.
+She worked at Pied Piper for years until they went belly up."""
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
 
+    [[params.team.members]]
+      img = "2.jpg"
+      name = "Larry Parker"
+      position = "Lead Marketer"
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
+
+    [[params.team.members]]
+      img = "3.jpg"
+      name = "Diana Pertersen"
+      position = "Lead Developer"
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
+
+  # Client section
+    [params.clients_list]
+      enable = true
+      # Possibility to center items
+      #center = true
+      # Optional client title specifying the involvement
+      #title = "Used and trusted by"
+
+      # All the clients' logos are stored under 'static/img/logos'.
+      # Replace them with your clients's logos.
+      # Suggestion: .svg in the size of 280px*80px looks good
+      [[params.clients]]
+        logo = "envato.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "designmodo.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "themeforest.jpg"
+        link = "#"
+
+      [[params.clients]]
+        logo = "creative-market.jpg"
+        link = "#"
 
   # Contact section
   [params.contact]
     enable = true
     title = "Contact us"
-    #subtitle  = "Lorem ipsum dolor sit amet consectetur."
+    subtitle  = "Lorem ipsum dolor sit amet consectetur."
     buttonText = "Send message"
     # netlify = true
 
@@ -182,7 +264,7 @@ googleAnalytics = ""
     # add some custom JS script to finish the implementation.
     # postURL = "https://example.com/mailout/"
 
-    email = "radiantglowairbrushstudio@gmail.com"
+    email = "your@email.com"
 
     # Success and error message overwrite for async contact form
     #thanks = "Thank you for awesomely contacting us."
@@ -237,3 +319,10 @@ googleAnalytics = ""
       link = "#"
       title = "LinkedIn"
 
+    [[params.footer.quicklinks]]
+      text = "Privacy Policy"
+      link = "#"
+
+    [[params.footer.quicklinks]]
+      text = "Terms of Use"
+      link = "#"
