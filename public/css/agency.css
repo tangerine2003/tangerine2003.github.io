@@ -14,8 +14,7 @@ body {
 }
 
 .text-primary {
-    /*color: #fed136;*/
-    color: #0e0b02;
+    color: #fed136;
 }
 
 p {
@@ -286,7 +285,7 @@ fieldset[disabled] .btn-xl.active {
 
 header {
     text-align: center;
-    color:#f6bf01;
+    color: #fec503;
     background-attachment: scroll;
     background-image: url(../img/header-bg.jpg);
     background-position: center center;
