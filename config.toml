@@ -53,7 +53,7 @@ googleAnalytics = ""
     #portfolio = "Portfolio"
     about = "About"
     #team = "Team"
-    contact = "Contact"
+    contact = "Contact Us"
 
     # Add custom links. Those can be pre- and postpended to the default menu above.
     # Use the weight attribute to order your custom links. Uncomment the example
@@ -160,7 +160,7 @@ googleAnalytics = ""
   [params.contact]
     enable = true
     title = "Contact us"
-    #subtitle  = "Lorem ipsum dolor sit amet consectetur."
+    subtitle  = "Please Contact us for additional details or to make an appointment!!!"
     buttonText = "Send message"
     # netlify = true
 
@@ -185,7 +185,7 @@ googleAnalytics = ""
     email = "radiantglowairbrushstudio@gmail.com"
 
     # Success and error message overwrite for async contact form
-    #thanks = "Thank you for awesomely contacting us."
+    thanks = "Thank you for awesomely contacting us."
     #error = "Message could not be send. Please contact us at mail@example.com instead."
 
     [params.contact.captcha]
@@ -222,18 +222,18 @@ googleAnalytics = ""
     enable = true
     copyright = "Published under the Apache License 2.0."
 
-    [[params.footer.social]]
-      icon = "fa-twitter"
-      link = "#"
-      title = "Twitter"
+    #[[params.footer.social]]
+     # icon = "fa-twitter"
+     # link = "#"
+     # title = "Twitter"
 
     [[params.footer.social]]
       icon = "fa-facebook"
       link = "#"
       title = "Facebook"
 
-    [[params.footer.social]]
-      icon = "fa-linkedin"
-      link = "#"
-      title = "LinkedIn"
+    #[[params.footer.social]]
+    #  icon = "fa-linkedin"
+    #  link = "#"
+    #  title = "LinkedIn"
 
